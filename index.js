@@ -41,14 +41,16 @@ const refs = {
         let i = randomIntegerFromInterval(min, max);
         refs.body.style.backgroundColor = colors[i];
       }, 1000);
+
     },
     stop() {
       clearInterval(this.switchColors);
       this.isActive = false;
     },
   };
-
+ 
 
   
   refs.startBtn.addEventListener("click", timer.start.bind(timer));
+
   refs.stopBtn.addEventListener("click", timer.stop.bind(timer));
